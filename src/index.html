@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script defer src="./script.js"></script>
+
+    <style>
+        body 
+        {
+            background-color: #5072A7;
+        }
+
+        span 
+        {
+            background-color: white;
+            width: 40px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .game-btn 
+        {
+            width: 9vw;
+            height: 5vh;
+            border-radius: 18px;
+            color: black;
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+<body>
+     <!-- Div that will contain all main page contents -->
+     <div class="col-8 mx-auto p-2">
+        <div id="logo" class="text-center mt-1">
+            <img class="" src="./img/keno_logo.png" alt="">
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            
+    
+            <div id="game-board">
+                <div class="mt-2"> 
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="mt-1"> 
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                    <span>16</span>
+                    <span>17</span>
+                    <span>18</span>
+                    <span>19</span>
+                    <span>20</span>
+                </div>
+                <div class="mt-1"> 
+                    <span>21</span>
+                    <span>22</span>
+                    <span>23</span>
+                    <span>24</span>
+                    <span>25</span>
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+                    <span>29</span>
+                    <span>30</span>
+                </div>
+                <div class="mt-1"> 
+                    <span>31</span>
+                    <span>32</span>
+                    <span>33</span>
+                    <span>34</span>
+                    <span>35</span>
+                    <span>36</span>
+                    <span>37</span>
+                    <span>38</span>
+                    <span>39</span>
+                    <span>40</span>
+                </div>
+                <div class="mt-1"> 
+                    <span>41</span>
+                    <span>42</span>
+                    <span>43</span>
+                    <span>44</span>
+                    <span>45</span>
+                    <span>46</span>
+                    <span>47</span>
+                    <span>48</span>
+                    <span>49</span>
+                    <span>50</span>
+                </div>
+                <div class="mt-1"> 
+                    <span>51</span>
+                    <span>52</span>
+                    <span>53</span>
+                    <span>54</span>
+                    <span>55</span>
+                    <span>56</span>
+                    <span>57</span>
+                    <span>58</span>
+                    <span>59</span>
+                    <span>60</span>
+                </div>
+                <div class="mt-1"> 
+                    <span>61</span>
+                    <span>62</span>
+                    <span>63</span>
+                    <span>64</span>
+                    <span>65</span>
+                    <span>66</span>
+                    <span>67</span>
+                    <span>68</span>
+                    <span>69</span>
+                    <span>70</span>
+                </div><div class="mt-1"> 
+                    <span>71</span>
+                    <span>72</span>
+                    <span>73</span>
+                    <span>74</span>
+                    <span>75</span>
+                    <span>76</span>
+                    <span>77</span>
+                    <span>78</span>
+                    <span>79</span>
+                    <span>80</span>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button id="start-button" class="game-btn btn" style="background-color: #009e60;" onclick="startNewGame()">Start new game</button>
+                </div>
+
+            </div>
+
+
+            <div class="mx-5">
+                <div class="mt-2"> 
+                    <span onclick="selectNum(this)">1</span>
+                    <span onclick="selectNum(this)">2</span>
+                    <span onclick="selectNum(this)">3</span>
+                    <span onclick="selectNum(this)">4</span>
+                    <span onclick="selectNum(this)">5</span>
+                    <span onclick="selectNum(this)">6</span>
+                    <span onclick="selectNum(this)">7</span>
+                    <span onclick="selectNum(this)">8</span>
+                    <span onclick="selectNum(this)">9</span>
+                    <span onclick="selectNum(this)">10</span>
+                </div>
+                <div class="mt-1"> 
+                    <span onclick="selectNum(this)">11</span>
+                    <span onclick="selectNum(this)">12</span>
+                    <span onclick="selectNum(this)">13</span>
+                    <span onclick="selectNum(this)">14</span>
+                    <span onclick="selectNum(this)">15</span>
+                    <span onclick="selectNum(this)">16</span>
+                    <span onclick="selectNum(this)">17</span>
+                    <span onclick="selectNum(this)">18</span>
+                    <span onclick="selectNum(this)">19</span>
+                    <span onclick="selectNum(this)">20</span>
+                </div>
+                <div class="mt-1"> 
+                    <span onclick="selectNum(this)">21</span>
+                    <span onclick="selectNum(this)">22</span>
+                    <span onclick="selectNum(this)">23</span>
+                    <span onclick="selectNum(this)">24</span>
+                    <span onclick="selectNum(this)">25</span>
+                    <span onclick="selectNum(this)">26</span>
+                    <span onclick="selectNum(this)">27</span>
+                    <span onclick="selectNum(this)">28</span>
+                    <span onclick="selectNum(this)">29</span>
+                    <span onclick="selectNum(this)">30</span>
+                </div>
+                <div class="mt-1"> 
+                    <span onclick="selectNum(this)">31</span>
+                    <span onclick="selectNum(this)">32</span>
+                    <span onclick="selectNum(this)">33</span>
+                    <span onclick="selectNum(this)">34</span>
+                    <span onclick="selectNum(this)">35</span>
+                    <span onclick="selectNum(this)">36</span>
+                    <span onclick="selectNum(this)">37</span>
+                    <span onclick="selectNum(this)">38</span>
+                    <span onclick="selectNum(this)">39</span>
+                    <span onclick="selectNum(this)">40</span>
+                </div>
+                <div class="mt-1"> 
+                    <span onclick="selectNum(this)">41</span>
+                    <span onclick="selectNum(this)">42</span>
+                    <span onclick="selectNum(this)">43</span>
+                    <span onclick="selectNum(this)">44</span>
+                    <span onclick="selectNum(this)">45</span>
+                    <span onclick="selectNum(this)">46</span>
+                    <span onclick="selectNum(this)">47</span>
+                    <span onclick="selectNum(this)">48</span>
+                    <span onclick="selectNum(this)">49</span>
+                    <span onclick="selectNum(this)">50</span>
+                </div>
+                <div class="mt-1"> 
+                    <span onclick="selectNum(this)">51</span>
+                    <span onclick="selectNum(this)">52</span>
+                    <span onclick="selectNum(this)">53</span>
+                    <span onclick="selectNum(this)">54</span>
+                    <span onclick="selectNum(this)">55</span>
+                    <span onclick="selectNum(this)">56</span>
+                    <span onclick="selectNum(this)">57</span>
+                    <span onclick="selectNum(this)">58</span>
+                    <span onclick="selectNum(this)">59</span>
+                    <span onclick="selectNum(this)">60</span>
+                </div>
+                <div class="mt-1"> 
+                    <span onclick="selectNum(this)">61</span>
+                    <span onclick="selectNum(this)">62</span>
+                    <span onclick="selectNum(this)">63</span>
+                    <span onclick="selectNum(this)">64</span>
+                    <span onclick="selectNum(this)">65</span>
+                    <span onclick="selectNum(this)">66</span>
+                    <span onclick="selectNum(this)">67</span>
+                    <span onclick="selectNum(this)">68</span>
+                    <span onclick="selectNum(this)">69</span>
+                    <span onclick="selectNum(this)">70</span>
+                </div>
+                <div class="mt-1"> 
+                    <span onclick="selectNum(this)">71</span>
+                    <span onclick="selectNum(this)">72</span>
+                    <span onclick="selectNum(this)">73</span>
+                    <span onclick="selectNum(this)">74</span>
+                    <span onclick="selectNum(this)">75</span>
+                    <span onclick="selectNum(this)">76</span>
+                    <span onclick="selectNum(this)">77</span>
+                    <span onclick="selectNum(this)">78</span>
+                    <span onclick="selectNum(this)">79</span>
+                    <span onclick="selectNum(this)">80</span>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button id="clear-button" class="game-btn btn" style="background-color: #C6011F" onclick="clearPlayerBoard()">Clear board</button>
+                </div>
+            </div>
+
+        </div>
+        <h3 id="game-prompt" class="text-center mt-5" style="color: #FFD700; display: none;">You have lost, you only got 0 spots</h3>
+        
+
+        
+
+    </div>
+    
+</body>
+</html>
